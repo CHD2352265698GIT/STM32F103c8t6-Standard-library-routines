@@ -1,0 +1,9 @@
+.\objects\qrcodegen.o: Middlewares\LVGL\GUI\lvgl\src\extra\libs\qrcode\qrcodegen.c
+.\objects\qrcodegen.o: D:\Keil_v5\ARM\ARM_COMFILE_5.06\Bin\..\include\assert.h
+.\objects\qrcodegen.o: D:\Keil_v5\ARM\ARM_COMFILE_5.06\Bin\..\include\limits.h
+.\objects\qrcodegen.o: D:\Keil_v5\ARM\ARM_COMFILE_5.06\Bin\..\include\stdlib.h
+.\objects\qrcodegen.o: D:\Keil_v5\ARM\ARM_COMFILE_5.06\Bin\..\include\string.h
+.\objects\qrcodegen.o: Middlewares\LVGL\GUI\lvgl\src\extra\libs\qrcode\qrcodegen.h
+.\objects\qrcodegen.o: D:\Keil_v5\ARM\ARM_COMFILE_5.06\Bin\..\include\stdbool.h
+.\objects\qrcodegen.o: D:\Keil_v5\ARM\ARM_COMFILE_5.06\Bin\..\include\stddef.h
+.\objects\qrcodegen.o: D:\Keil_v5\ARM\ARM_COMFILE_5.06\Bin\..\include\stdint.h
