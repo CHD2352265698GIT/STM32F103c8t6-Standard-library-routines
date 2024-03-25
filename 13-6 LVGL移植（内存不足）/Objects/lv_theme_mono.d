@@ -123,4 +123,3 @@
 .\objects\lv_theme_mono.o: Middlewares\LVGL\GUI\lvgl\src\extra\themes\mono\../../../../src/extra/libs/freetype/lv_freetype.h
 .\objects\lv_theme_mono.o: Middlewares\LVGL\GUI\lvgl\src\extra\themes\mono\../../../../src/extra/libs/rlottie/lv_rlottie.h
 .\objects\lv_theme_mono.o: Middlewares\LVGL\GUI\lvgl\src\extra\themes\mono\../../../../src/extra/libs/ffmpeg/lv_ffmpeg.h
-.\objects\lv_theme_mono.o: Middlewares\LVGL\GUI\lvgl\src\extra\themes\mono\../../../misc/lv_gc.h

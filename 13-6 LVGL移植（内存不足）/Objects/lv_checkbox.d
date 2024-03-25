@@ -54,4 +54,3 @@
 .\objects\lv_checkbox.o: Middlewares\LVGL\GUI\lvgl\src\widgets\../core/lv_obj_class.h
 .\objects\lv_checkbox.o: Middlewares\LVGL\GUI\lvgl\src\widgets\../core/lv_event.h
 .\objects\lv_checkbox.o: Middlewares\LVGL\GUI\lvgl\src\widgets\../core/lv_group.h
-.\objects\lv_checkbox.o: Middlewares\LVGL\GUI\lvgl\src\widgets\../misc/lv_txt_ap.h

@@ -54,8 +54,3 @@
 .\objects\lv_calendar_header_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\calendar\../../../core/lv_obj_class.h
 .\objects\lv_calendar_header_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\calendar\../../../core/lv_event.h
 .\objects\lv_calendar_header_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\calendar\../../../core/lv_group.h
-.\objects\lv_calendar_header_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\calendar\lv_calendar.h
-.\objects\lv_calendar_header_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\calendar\../../../widgets/lv_btnmatrix.h
-.\objects\lv_calendar_header_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\calendar\../../../widgets/lv_dropdown.h
-.\objects\lv_calendar_header_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\calendar\../../../widgets/../widgets/lv_label.h
-.\objects\lv_calendar_header_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\calendar\../../layouts/flex/lv_flex.h

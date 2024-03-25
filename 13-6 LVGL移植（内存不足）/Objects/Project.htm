@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Mar 16 23:33:12 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Mar 24 19:24:58 2024
 <BR><P>
-<H3>Maximum Stack Usage =         40 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        160 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-__rt_entry_main &rArr; main &rArr; Timer_Init &rArr; NVIC_Init
+__rt_entry_main &rArr; main &rArr; lv_timer_handler &rArr; lv_timer_exec &rArr; lv_timer_del &rArr; lv_mem_free &rArr; lv_tlsf_free &rArr; block_merge_prev &rArr; block_absorb &rArr; block_link_next &rArr; block_next &rArr; block_is_last
 <P>
 <H3>
 Functions with no stack information
@@ -85,8 +85,8 @@ Function Pointers
 Global Symbols
 </H3>
 <P><STRONG><a name="[3b]"></a>__main</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, __main.o(!!!main))
-<BR><BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+<BR><BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
 <P><STRONG><a name="[3c]"></a>__scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter))
@@ -97,9 +97,9 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[5e]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[84]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[5f]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[85]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
 <P><STRONG><a name="[3f]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -107,80 +107,80 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[60]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[86]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[43]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
 </UL>
 
-<P><STRONG><a name="[61]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[87]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[62]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
+<P><STRONG><a name="[88]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
 
-<P><STRONG><a name="[63]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[89]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[64]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[8a]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[65]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[8b]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[66]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[8c]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[67]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
+<P><STRONG><a name="[8d]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
 
-<P><STRONG><a name="[68]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[8e]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[69]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[8f]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[6a]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
+<P><STRONG><a name="[90]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
 
-<P><STRONG><a name="[6b]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
+<P><STRONG><a name="[91]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
 
-<P><STRONG><a name="[6c]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[92]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[6d]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[93]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[6e]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[94]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[6f]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[95]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[70]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[96]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
-<P><STRONG><a name="[71]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[97]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
-<P><STRONG><a name="[72]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
+<P><STRONG><a name="[98]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
 
-<P><STRONG><a name="[73]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[99]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[74]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[9a]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
-<P><STRONG><a name="[75]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[9b]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
 <P><STRONG><a name="[48]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
-<P><STRONG><a name="[76]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[9c]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
-<P><STRONG><a name="[77]"></a>__rt_lib_shutdown_fini_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+<P><STRONG><a name="[9d]"></a>__rt_lib_shutdown_fini_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
 
-<P><STRONG><a name="[78]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000009))
+<P><STRONG><a name="[9e]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000009))
 
-<P><STRONG><a name="[79]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000011))
+<P><STRONG><a name="[9f]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000011))
 
-<P><STRONG><a name="[7a]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000012))
+<P><STRONG><a name="[a0]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000012))
 
-<P><STRONG><a name="[7b]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
+<P><STRONG><a name="[a1]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
-<P><STRONG><a name="[7c]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000006))
+<P><STRONG><a name="[a2]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000006))
 
-<P><STRONG><a name="[7d]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E))
+<P><STRONG><a name="[a3]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E))
 
 <P><STRONG><a name="[3d]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
-<BR><BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
-<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 </UL>
 
-<P><STRONG><a name="[7e]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[a4]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
 <P><STRONG><a name="[40]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry4.o(.ARM.Collect$$rtentry$$00000004))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -193,17 +193,17 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
 </UL>
 
-<P><STRONG><a name="[7f]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+<P><STRONG><a name="[a5]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[44]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; Timer_Init &rArr; NVIC_Init
+<BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; lv_timer_handler &rArr; lv_timer_exec &rArr; lv_timer_del &rArr; lv_mem_free &rArr; lv_tlsf_free &rArr; block_merge_prev &rArr; block_absorb &rArr; block_link_next &rArr; block_next &rArr; block_is_last
 </UL>
 <BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 
-<P><STRONG><a name="[80]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[a6]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[4d]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -213,7 +213,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<P><STRONG><a name="[81]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[a7]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[49]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
@@ -356,21 +356,21 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[82]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[a8]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[83]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[a9]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[84]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[aa]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[4a]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<P><STRONG><a name="[85]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[ab]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[86]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[ac]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[87]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[ad]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, indicate_semi.o(.text), UNUSED)
 
 <P><STRONG><a name="[41]"></a>__user_setup_stackheap</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -391,13 +391,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[88]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[ae]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[4b]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[89]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[af]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[8]"></a>BusFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.BusFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
@@ -513,15 +513,105 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.UsageFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
+<P><STRONG><a name="[5f]"></a>_lv_ll_get_head</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lv_ll.o(i._lv_ll_get_head))
+<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_handler
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
+</UL>
+
+<P><STRONG><a name="[60]"></a>_lv_ll_get_next</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lv_ll.o(i._lv_ll_get_next))
+<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_handler
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
+</UL>
+
+<P><STRONG><a name="[63]"></a>_lv_ll_get_prev</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lv_ll.o(i._lv_ll_get_prev))
+<BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
+</UL>
+
+<P><STRONG><a name="[62]"></a>_lv_ll_get_tail</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lv_ll.o(i._lv_ll_get_tail))
+<BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
+</UL>
+
+<P><STRONG><a name="[5e]"></a>_lv_ll_remove</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, lv_ll.o(i._lv_ll_remove))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = _lv_ll_remove &rArr; node_set_prev
+</UL>
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_tail
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_prev
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_next
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;node_set_prev
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;node_set_next
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_del
+</UL>
+
+<P><STRONG><a name="[7a]"></a>lv_mem_free</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, lv_mem.o(i.lv_mem_free))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = lv_mem_free &rArr; lv_tlsf_free &rArr; block_merge_prev &rArr; block_absorb &rArr; block_link_next &rArr; block_next &rArr; block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_del
+</UL>
+
+<P><STRONG><a name="[7c]"></a>lv_tick_elaps</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, lv_hal_tick.o(i.lv_tick_elaps))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = lv_tick_elaps
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
+</UL>
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_handler
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_time_remaining
+</UL>
+
+<P><STRONG><a name="[7d]"></a>lv_tick_get</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, lv_hal_tick.o(i.lv_tick_get))
+<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_handler
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_exec
+</UL>
+
 <P><STRONG><a name="[53]"></a>lv_tick_inc</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, lv_hal_tick.o(i.lv_tick_inc))
 <BR><BR>[Called By]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_IRQHandler
 </UL>
 
-<P><STRONG><a name="[45]"></a>main</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = main &rArr; Timer_Init &rArr; NVIC_Init
+<P><STRONG><a name="[7e]"></a>lv_timer_del</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, lv_timer.o(i.lv_timer_del))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = lv_timer_del &rArr; lv_mem_free &rArr; lv_tlsf_free &rArr; block_merge_prev &rArr; block_absorb &rArr; block_link_next &rArr; block_next &rArr; block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_exec
+</UL>
+
+<P><STRONG><a name="[81]"></a>lv_timer_handler</STRONG> (Thumb, 298 bytes, Stack size 24 bytes, lv_timer.o(i.lv_timer_handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = lv_timer_handler &rArr; lv_timer_exec &rArr; lv_timer_del &rArr; lv_mem_free &rArr; lv_tlsf_free &rArr; block_merge_prev &rArr; block_absorb &rArr; block_link_next &rArr; block_next &rArr; block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_next
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_time_remaining
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_exec
+</UL>
+<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[7b]"></a>lv_tlsf_free</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, lv_tlsf.o(i.lv_tlsf_free))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = lv_tlsf_free &rArr; block_merge_prev &rArr; block_absorb &rArr; block_link_next &rArr; block_next &rArr; block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_prev
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_next
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_mark_as_free
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_is_free
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_insert
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_from_ptr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
+</UL>
+
+<P><STRONG><a name="[45]"></a>main</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = main &rArr; lv_timer_handler &rArr; lv_timer_exec &rArr; lv_timer_del &rArr; lv_mem_free &rArr; lv_tlsf_free &rArr; block_merge_prev &rArr; block_absorb &rArr; block_link_next &rArr; block_next &rArr; block_is_last
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_Init
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -541,6 +631,216 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SetSysClockTo72
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+</UL>
+
+<P><STRONG><a name="[64]"></a>node_set_next</STRONG> (Thumb, 28 bytes, Stack size 24 bytes, lv_ll.o(i.node_set_next))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = node_set_next
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
+</UL>
+
+<P><STRONG><a name="[61]"></a>node_set_prev</STRONG> (Thumb, 26 bytes, Stack size 24 bytes, lv_ll.o(i.node_set_prev))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = node_set_prev
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
+</UL>
+
+<P><STRONG><a name="[7f]"></a>lv_timer_exec</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, lv_timer.o(i.lv_timer_exec))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = lv_timer_exec &rArr; lv_timer_del &rArr; lv_mem_free &rArr; lv_tlsf_free &rArr; block_merge_prev &rArr; block_absorb &rArr; block_link_next &rArr; block_next &rArr; block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_del
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_time_remaining
+</UL>
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_handler
+</UL>
+
+<P><STRONG><a name="[80]"></a>lv_timer_time_remaining</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, lv_timer.o(i.lv_timer_time_remaining))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = lv_timer_time_remaining &rArr; lv_tick_elaps
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
+</UL>
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_handler
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_exec
+</UL>
+
+<P><STRONG><a name="[79]"></a>align_ptr</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, lv_tlsf.o(i.align_ptr))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = align_ptr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;insert_free_block
+</UL>
+
+<P><STRONG><a name="[65]"></a>block_absorb</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, lv_tlsf.o(i.block_absorb))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = block_absorb &rArr; block_link_next &rArr; block_next &rArr; block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_size
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_link_next
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_is_last
+</UL>
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_prev
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_next
+</UL>
+
+<P><STRONG><a name="[82]"></a>block_from_ptr</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lv_tlsf.o(i.block_from_ptr))
+<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
+</UL>
+
+<P><STRONG><a name="[69]"></a>block_insert</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, lv_tlsf.o(i.block_insert))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = block_insert &rArr; insert_free_block &rArr; align_ptr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mapping_insert
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;insert_free_block
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_size
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
+</UL>
+
+<P><STRONG><a name="[71]"></a>block_is_free</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lv_tlsf.o(i.block_is_free))
+<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_prev
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_next
+</UL>
+
+<P><STRONG><a name="[66]"></a>block_is_last</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, lv_tlsf.o(i.block_is_last))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_size
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_next
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_next
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_absorb
+</UL>
+
+<P><STRONG><a name="[74]"></a>block_is_prev_free</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lv_tlsf.o(i.block_is_prev_free))
+<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_prev
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_prev
+</UL>
+
+<P><STRONG><a name="[68]"></a>block_link_next</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, lv_tlsf.o(i.block_link_next))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = block_link_next &rArr; block_next &rArr; block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_next
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_mark_as_free
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_absorb
+</UL>
+
+<P><STRONG><a name="[6d]"></a>block_mark_as_free</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, lv_tlsf.o(i.block_mark_as_free))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = block_mark_as_free &rArr; block_link_next &rArr; block_next &rArr; block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_set_prev_free
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_set_free
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_link_next
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
+</UL>
+
+<P><STRONG><a name="[70]"></a>block_merge_next</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, lv_tlsf.o(i.block_merge_next))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = block_merge_next &rArr; block_absorb &rArr; block_link_next &rArr; block_next &rArr; block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_remove
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_next
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_is_last
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_is_free
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_absorb
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
+</UL>
+
+<P><STRONG><a name="[73]"></a>block_merge_prev</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, lv_tlsf.o(i.block_merge_prev))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = block_merge_prev &rArr; block_absorb &rArr; block_link_next &rArr; block_next &rArr; block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_remove
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_prev
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_is_prev_free
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_is_free
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_absorb
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
+</UL>
+
+<P><STRONG><a name="[6c]"></a>block_next</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, lv_tlsf.o(i.block_next))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = block_next &rArr; block_is_last
+</UL>
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;offset_to_block
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_to_ptr
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_size
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_is_last
+</UL>
+<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_next
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_link_next
+</UL>
+
+<P><STRONG><a name="[75]"></a>block_prev</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, lv_tlsf.o(i.block_prev))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = block_prev
+</UL>
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_is_prev_free
+</UL>
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_prev
+</UL>
+
+<P><STRONG><a name="[72]"></a>block_remove</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, lv_tlsf.o(i.block_remove))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = block_remove &rArr; mapping_insert
+</UL>
+<BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;remove_free_block
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mapping_insert
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_size
+</UL>
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_prev
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_next
+</UL>
+
+<P><STRONG><a name="[6f]"></a>block_set_free</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lv_tlsf.o(i.block_set_free))
+<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_mark_as_free
+</UL>
+
+<P><STRONG><a name="[6e]"></a>block_set_prev_free</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lv_tlsf.o(i.block_set_prev_free))
+<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_mark_as_free
+</UL>
+
+<P><STRONG><a name="[67]"></a>block_size</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lv_tlsf.o(i.block_size))
+<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_remove
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_next
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_is_last
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_insert
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_absorb
+</UL>
+
+<P><STRONG><a name="[76]"></a>block_to_ptr</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lv_tlsf.o(i.block_to_ptr))
+<BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;insert_free_block
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_next
+</UL>
+
+<P><STRONG><a name="[6b]"></a>insert_free_block</STRONG> (Thumb, 152 bytes, Stack size 32 bytes, lv_tlsf.o(i.insert_free_block))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = insert_free_block &rArr; align_ptr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_to_ptr
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;align_ptr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_insert
+</UL>
+
+<P><STRONG><a name="[6a]"></a>mapping_insert</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, lv_tlsf.o(i.mapping_insert))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = mapping_insert
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tlsf_fls
+</UL>
+<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_remove
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_insert
+</UL>
+
+<P><STRONG><a name="[77]"></a>offset_to_block</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_tlsf.o(i.offset_to_block))
+<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_next
+</UL>
+
+<P><STRONG><a name="[78]"></a>remove_free_block</STRONG> (Thumb, 114 bytes, Stack size 20 bytes, lv_tlsf.o(i.remove_free_block))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = remove_free_block
+</UL>
+<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_remove
+</UL>
+
+<P><STRONG><a name="[83]"></a>tlsf_fls</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, lv_tlsf.o(i.tlsf_fls))
+<BR><BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mapping_insert
 </UL>
 <P>
 <H3>

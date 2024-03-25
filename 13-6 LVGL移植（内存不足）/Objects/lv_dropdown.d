@@ -54,8 +54,3 @@
 .\objects\lv_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\widgets\../core/lv_event.h
 .\objects\lv_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\widgets\../core/lv_group.h
 .\objects\lv_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\widgets\lv_dropdown.h
-.\objects\lv_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\widgets\../widgets/lv_label.h
-.\objects\lv_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\widgets\../core/lv_indev.h
-.\objects\lv_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\widgets\../core/lv_disp.h
-.\objects\lv_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\widgets\../core/lv_theme.h
-.\objects\lv_dropdown.o: Middlewares\LVGL\GUI\lvgl\src\widgets\../misc/lv_txt_ap.h

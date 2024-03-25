@@ -54,7 +54,3 @@
 .\objects\lv_menu.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\menu\../../../core/lv_obj_class.h
 .\objects\lv_menu.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\menu\../../../core/lv_event.h
 .\objects\lv_menu.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\menu\../../../core/lv_group.h
-.\objects\lv_menu.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\menu\../../layouts/flex/lv_flex.h
-.\objects\lv_menu.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\menu\../../../widgets/lv_label.h
-.\objects\lv_menu.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\menu\../../../widgets/lv_btn.h
-.\objects\lv_menu.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\menu\../../../widgets/lv_img.h

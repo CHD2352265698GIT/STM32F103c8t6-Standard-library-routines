@@ -60,4 +60,3 @@
 .\objects\lv_hal_disp.o: Middlewares\LVGL\GUI\lvgl\src\hal\../draw/sw/lv_draw_sw.h
 .\objects\lv_hal_disp.o: Middlewares\LVGL\GUI\lvgl\src\hal\../draw/sw/lv_draw_sw_blend.h
 .\objects\lv_hal_disp.o: Middlewares\LVGL\GUI\lvgl\src\hal\../draw/stm32_dma2d/lv_gpu_stm32_dma2d.h
-.\objects\lv_hal_disp.o: Middlewares\LVGL\GUI\lvgl\src\hal\../extra/themes/default/lv_theme_default.h

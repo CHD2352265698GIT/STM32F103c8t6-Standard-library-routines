@@ -55,6 +55,3 @@
 .\objects\lv_keyboard.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\keyboard\../../../widgets/../core/lv_obj_class.h
 .\objects\lv_keyboard.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\keyboard\../../../widgets/../core/lv_event.h
 .\objects\lv_keyboard.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\keyboard\../../../widgets/../core/lv_group.h
-.\objects\lv_keyboard.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\keyboard\../../../widgets/lv_textarea.h
-.\objects\lv_keyboard.o: Middlewares\LVGL\GUI\lvgl\src\extra\widgets\keyboard\../../../widgets/lv_label.h
-.\objects\lv_keyboard.o: D:\Keil_v5\ARM\ARM_COMFILE_5.06\Bin\..\include\stdlib.h
